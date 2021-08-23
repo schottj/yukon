@@ -1,2 +1,3 @@
 packages:
   - git: "https://{{env_var('DBT_ENV_SECRET_GIT_TOKEN', 'code')}}@github.com/schottj/dbt-utils-private.git"
+  # - git: "https://github.com/schottj/dbt-utils-private.git"
