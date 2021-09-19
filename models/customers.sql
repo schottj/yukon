@@ -55,8 +55,11 @@ final as (
 
     select
         customers.user_id,
+        customers.first_name,
+        customers.last_name,
         customer_orders.first_order,
         customer_orders.most_recent_order,
+        customer_orders.number_of_orders,
         customer_payments.total_amount as customer_lifetime_value
 
     from customers
@@ -64,7 +67,7 @@ final as (
     left join customer_orders using (user_id)
 
     left join customer_payments using (user_id)
-
+    order by user_id
 )
 
 select * from final

@@ -1,7 +1,7 @@
 
-name: 'jaffle_shop'
+name: 'yukon_shop'
 version: '0.1'
-profile: 'jaffle_shop'
+profile: 'yukon_shop'
 config-version: 2
 
 source-paths: ["models"]
@@ -17,7 +17,7 @@ clean-targets:
     - "logs"
 
 models:
-  jaffle_shop:
+  yukon_shop:
       materialized: table
       staging:
         materialized: table
