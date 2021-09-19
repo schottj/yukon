@@ -1,45 +1,52 @@
 with customers as (
 
-    select * from {{ ref('stg_customers') }}
+    select * from {{ ref('stg_users') }}
 
 ),
 
-orders as (
+purchases as (
 
-    select * from {{ ref('stg_orders') }}
+    select * from {{ ref('stg_purchases') }}
 
 ),
 
-payments as (
+items as (
 
-    select * from {{ ref('stg_payments') }}
+    select * from {{ ref('stg_items') }}
 
 ),
 
 customer_orders as (
 
-        select
-        customer_id,
-
+    select
+        user_id,
         min(order_date) as first_order,
         max(order_date) as most_recent_order,
-        count(order_id) as number_of_orders
-    from orders
+        count(purchase_id) as number_of_orders
+    from purchases
 
     group by 1
 
 ),
 
+purchase_detail as (
+    select 
+        purchases.*,
+        items.category,
+        items.price
+    from purchases
+    left join items 
+    on purchases.item_id = items.item_id
+),
+
 customer_payments as (
 
     select
-        orders.customer_id,
-        sum(amount) as total_amount
+        purchase_detail.user_id,
+        sum(price) as total_amount
 
-    from payments
-
-    left join orders using (order_id)
-
+    from purchase_detail
+    where state = 1
     group by 1
 
 ),
@@ -47,16 +54,16 @@ customer_payments as (
 final as (
 
     select
-        customers.customer_id,
+        customers.user_id,
         customer_orders.first_order,
         customer_orders.most_recent_order,
         customer_payments.total_amount as customer_lifetime_value
 
     from customers
 
-    left join customer_orders using (customer_id)
+    left join customer_orders using (user_id)
 
-    left join customer_payments using (customer_id)
+    left join customer_payments using (user_id)
 
 )
 
