@@ -4,7 +4,7 @@ version: '0.1'
 profile: 'yukon_shop'
 config-version: 2
 
-source-paths: ["models"]
+model-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
