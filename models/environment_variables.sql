@@ -1,3 +1,5 @@
+{{ config(schema='environment') }}
+
 with items as (
     select * from {{ref('stg_items')}}
     limit 1
