@@ -13,6 +13,9 @@ models:
 
       - name: first_name
         description: Customer's first name. PII.
+        tests:
+          - accepted_values:
+              values: ['Julia', 'Jeremy', 'Sai', 'Barr', 'Drew', 'Amy', 'Ryan']
 
       - name: last_name
         description: Customer's last name. PII.
