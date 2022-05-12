@@ -8,8 +8,8 @@ renamed as (
 
     select
         id as item_id,
-        category,
-        price
+        price +1,
+        category
     from source
 
 )
