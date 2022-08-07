@@ -13,7 +13,11 @@ models:
 
       - name: first_name
         description: Customer's first name. PII.
-        warn_if: "Julia"
+        tests:
+          - unique:
+              config:
+                severity: warn
+                warn-if: ">2"
 
       - name: last_name
         description: Customer's last name. PII.
