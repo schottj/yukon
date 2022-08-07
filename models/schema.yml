@@ -13,7 +13,7 @@ models:
 
       - name: first_name
         description: Customer's first name. PII.
-        
+        warn_if: "Julia"
 
       - name: last_name
         description: Customer's last name. PII.
