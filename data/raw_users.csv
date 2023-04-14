@@ -1,7 +1,7 @@
 id,first_name,last_name,email,language,deactivated
 1,Julian,Schottenstein,julia.schottenstein@dbtlabs.com,English,1
 2,Drew,Banin,drew.banin@dbtlabs.com,English,1
-3,DB,Yaron,barr.yaron@dbtlabs.com,Hebrew,1
+3,DB,Berton,barr.yaron@dbtlabs.com,Hebrew,1
 4,Jeremy,Cohen,jeremy.cohen@dbtlabs.com,French,1
 5,Sai,Maddali,sai.maddali@dbtlab.com,Spanish,0
 6,Nate,Nunta,ryan.burke@dbtlabs.com,Spanish,0
