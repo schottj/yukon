@@ -1,9 +1,11 @@
 id,first_name,last_name,email,language,deactivated
-1,Julia,Schottenstein,julia.schottenstein@dbtlabs.com,English,1
+1,Julia,Schottenstein,julia.schottenstein@dbtlabs.com,French,1
 2,Drew,Banin,drew.banin@dbtlabs.com,English,1
-3,Barr,Yaron,barr.yaron@dbtlabs.com,Hebrew,1
+3,Florian,Eiden,florian.eiden@dbtlabs.com,French,1
 4,Jeremy,Cohen,jeremy.cohen@dbtlabs.com,French,1
-5,Sai,Maddali,sai.maddali@dbtlab.com,Spanish,0
-6,Nate,Nunta,ryan.burke@dbtlabs.com,Spanish,0
-7,Amy,Byrum,amy.byrum@dbtlabs.com,English,1
-8,Jeremy,Hutt,jeremy.hutt@dbt.dbtlabs.com,English,1
+5,Sai,Maddali,sai.maddali@dbtlab.com,English,1
+6,Nate,Nunta,nate.nunta@dbtlabs.com,Thai,1
+7,Cam,Afzal,cam.afzal@dbtlabs.com,Spanish,1
+8,Roxi,Pourzand,roxi.pourzand@dbt.dbtlabs.com,English,1
+9,Nick,Handel,nick.handel@dbtlabs.com,English,1
+10,James,Mayfield,james.mayfield@dbtlabs.com,English,1
