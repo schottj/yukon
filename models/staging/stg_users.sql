@@ -11,7 +11,9 @@ renamed as (
         last_name,
         email, 
         language, 
-        deactivated
+        deactivated,
+        {{env_var('DBT_ENV')}}
+
 
     from source
 
